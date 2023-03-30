@@ -14,6 +14,11 @@
 		88A4D7B229CB2F06005114F5 /* MyTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A4D7B129CB2F06005114F5 /* MyTimerTests.swift */; };
 		88A4D7BC29CB2F06005114F5 /* MyTimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A4D7BB29CB2F06005114F5 /* MyTimerUITests.swift */; };
 		88A4D7BE29CB2F06005114F5 /* MyTimerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A4D7BD29CB2F06005114F5 /* MyTimerUITestsLaunchTests.swift */; };
+		88A4D7CB29CB2F27005114F5 /* Content-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A4D7CA29CB2F27005114F5 /* Content-ViewModel.swift */; };
+		88E8323A29D099500024DCFF /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E8323929D099500024DCFF /* HapticsManager.swift */; };
+		88E8323C29D24F030024DCFF /* PushNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E8323B29D24F030024DCFF /* PushNotifications.swift */; };
+		88E8324129D4CDFD0024DCFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E8324029D4CDFD0024DCFF /* AppDelegate.swift */; };
+		88E8324429D4D8660024DCFF /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 88E8324329D4D8660024DCFF /* AudioKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,11 @@
 		88A4D7B729CB2F06005114F5 /* MyTimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyTimerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		88A4D7BB29CB2F06005114F5 /* MyTimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTimerUITests.swift; sourceTree = "<group>"; };
 		88A4D7BD29CB2F06005114F5 /* MyTimerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTimerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		88A4D7CA29CB2F27005114F5 /* Content-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Content-ViewModel.swift"; sourceTree = "<group>"; };
+		88E8323929D099500024DCFF /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
+		88E8323B29D24F030024DCFF /* PushNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotifications.swift; sourceTree = "<group>"; };
+		88E8323F29D4C4970024DCFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		88E8324029D4CDFD0024DCFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88E8324429D4D8660024DCFF /* AudioKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,8 +105,13 @@
 		88A4D79F29CB2F04005114F5 /* MyTimer */ = {
 			isa = PBXGroup;
 			children = (
+				88E8323F29D4C4970024DCFF /* Info.plist */,
 				88A4D7A029CB2F04005114F5 /* MyTimerApp.swift */,
+				88E8324029D4CDFD0024DCFF /* AppDelegate.swift */,
 				88A4D7A229CB2F04005114F5 /* ContentView.swift */,
+				88A4D7CA29CB2F27005114F5 /* Content-ViewModel.swift */,
+				88E8323929D099500024DCFF /* HapticsManager.swift */,
+				88E8323B29D24F030024DCFF /* PushNotifications.swift */,
 				88A4D7A429CB2F06005114F5 /* Assets.xcassets */,
 				88A4D7A629CB2F06005114F5 /* Preview Content */,
 			);
@@ -143,6 +159,9 @@
 			dependencies = (
 			);
 			name = MyTimer;
+			packageProductDependencies = (
+				88E8324329D4D8660024DCFF /* AudioKit */,
+			);
 			productName = MyTimer;
 			productReference = 88A4D79D29CB2F04005114F5 /* MyTimer.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +234,9 @@
 				Base,
 			);
 			mainGroup = 88A4D79429CB2F04005114F5;
+			packageReferences = (
+				88E8324229D4D8660024DCFF /* XCRemoteSwiftPackageReference "AudioKit" */,
+			);
 			productRefGroup = 88A4D79E29CB2F04005114F5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +279,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88E8324129D4CDFD0024DCFF /* AppDelegate.swift in Sources */,
 				88A4D7A329CB2F04005114F5 /* ContentView.swift in Sources */,
 				88A4D7A129CB2F04005114F5 /* MyTimerApp.swift in Sources */,
+				88E8323A29D099500024DCFF /* HapticsManager.swift in Sources */,
+				88A4D7CB29CB2F27005114F5 /* Content-ViewModel.swift in Sources */,
+				88E8323C29D24F030024DCFF /* PushNotifications.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,7 +446,7 @@
 				DEVELOPMENT_TEAM = FJJHFM4GK5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = MyTimer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -430,7 +456,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.MyTimer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MyTimer1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -449,7 +475,7 @@
 				DEVELOPMENT_TEAM = FJJHFM4GK5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = MyTimer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -459,7 +485,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.MyTimer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MyTimer1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -583,6 +609,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		88E8324229D4D8660024DCFF /* XCRemoteSwiftPackageReference "AudioKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/AudioKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		88E8324329D4D8660024DCFF /* AudioKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 88E8324229D4D8660024DCFF /* XCRemoteSwiftPackageReference "AudioKit" */;
+			productName = AudioKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 88A4D79529CB2F04005114F5 /* Project object */;
 }

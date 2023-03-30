@@ -9,6 +9,9 @@ import SwiftUI
 
 @main
 struct MyTimerApp: App {
+    
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+
     var body: some Scene {
         WindowGroup {
             ContentView()
